@@ -34,11 +34,17 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 sudo usermod -aG docker ubuntu
 
 sudo usermod -aG jenkins ubuntu
+sudo usermod -aG docker jenkins
 
 newgrp ubuntu
 
 apt-get install git -y
 
+sudo apt-get install unzip -y
+
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
 
 git version
 docker --version
