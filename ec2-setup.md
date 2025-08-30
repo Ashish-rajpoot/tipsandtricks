@@ -46,7 +46,7 @@ sudo usermod -aG docker jenkins
 ```
 then
 ```bash
-newgrp ubuntu
+newgrp jenkins
 ```
 
 ## Install Aws cli
