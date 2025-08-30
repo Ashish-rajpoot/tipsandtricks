@@ -42,36 +42,30 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 
 ## add usergroup
 ```bash
-sudo usermod -aG docker ubuntu
-```
-```bash
-sudo usermod -aG jenkins ubuntu
+sudo usermod -aG docker jenkins
 ```
 then
 ```bash
 newgrp ubuntu
 ```
 
-## Debian/Ubuntu
-For the latest stable version for your release of Debian/Ubuntu
+## Install Aws cli
+```bash
+sudo apt-get install unzip -y
 
-```bash
- apt-get install git -y
- ```
-OR
-For Ubuntu, this PPA provides the latest stable upstream Git version
-```bash
-add-apt-repository ppa:git-core/ppa
-apt update; apt install git -y
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+
 ```
-
-## Check
+## Switch to jenkins user
 ```bash
-git version
-docker --version
-jenkins --version
+sudo su - jenkins
 ```
-
+configure `aws configure` using
+```bash
+aws configure
+```
 
 
 
