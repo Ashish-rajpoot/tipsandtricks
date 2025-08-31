@@ -45,6 +45,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 sudo usermod -aG docker jenkins
 ```
 then
+
 ```bash
 newgrp jenkins
 ```
@@ -67,7 +68,14 @@ configure `aws configure` using
 aws configure
 ```
 
-
+# Fix the Slowness to jenkins mannually
+edit file `cat /var/lib/jenkins/jenkins.model.JenkinsLocationConfiguration.xml`
+```bash
+<?xml version='1.1' encoding='UTF-8'?>
+<jenkins.model.JenkinsLocationConfiguration>
+  <jenkinsUrl>http://localhost:8080/</jenkinsUrl>
+</jenkins.model.JenkinsLocationConfiguration>
+```
 
 
 
