@@ -15,8 +15,8 @@ Here's a complete **User Data script** you can use when launching an EC2 instanc
 #!/bin/bash
 
 # Update and install Nginx
-yum update -y
-yum install -y nginx
+apt update -y
+apt install -y nginx
 
 # Start and enable Nginx
 systemctl start nginx
